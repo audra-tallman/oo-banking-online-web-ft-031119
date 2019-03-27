@@ -22,8 +22,13 @@ class Transfer
     if self.valid? 
       @sender.BankAccount - @trasnfer_amount 
       @receiver.BankAccount + @transfer_amount
-      ""
-    
+    else 
+      "Transaction rejected. Please check your account balance."
+    end 
   end 
+  
+  def reverse_transfer
+  end 
+  
   
 end
