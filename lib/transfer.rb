@@ -15,8 +15,7 @@ class Transfer
   
   def execute_transaction
     if self.valid? 
-      @sender.BankAccount - @trasnfer_amount 
-      @receiver.BankAccount + @transfer_amount
+     "Transaction successful."
     else 
       "Transaction rejected. Please check your account balance."
     end 
