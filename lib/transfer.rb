@@ -19,8 +19,11 @@ class Transfer
   end 
   
   def execute_transaction
-    @sender.BankAccount - @trasnfer_amount
-    @receiver.BankAccount + @transfer_amount
+    if self.valid? 
+      @sender.BankAccount - @trasnfer_amount 
+      @receiver.BankAccount + @transfer_amount
+      ""
+    
   end 
   
 end
