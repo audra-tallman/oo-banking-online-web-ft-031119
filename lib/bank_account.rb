@@ -2,6 +2,8 @@ class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
   
+  @@account
+  
   def initialize(name)
     @name= name
     @balance= 1000
@@ -9,7 +11,7 @@ class BankAccount
   end 
 
   def deposit(num)
-    @@account << num
+    @ << num
     @balance += num
   end 
   
@@ -23,6 +25,11 @@ class BankAccount
     elsif @balance > 0
       "valid"
     else
+      "invalid"
+    end 
+  end 
+  
+  def close_account
       
 
 end
