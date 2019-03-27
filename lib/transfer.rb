@@ -10,12 +10,7 @@ class Transfer
   end 
 
   def valid?
-    if @sender.BankAccount.valid? and
-        @receiver.BankAccount.valid?
-        true 
-    else 
-      false 
-    end 
+    sender.valid? and receiver.valid?
   end 
   
   def execute_transaction
