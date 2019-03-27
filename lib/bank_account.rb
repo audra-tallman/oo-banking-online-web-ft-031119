@@ -2,7 +2,6 @@ class BankAccount
   attr_accessor :balance, :status
   attr_reader :name
   
-  @@account
   
   def initialize(name)
     @name= name
@@ -11,7 +10,6 @@ class BankAccount
   end 
 
   def deposit(num)
-    @ << num
     @balance += num
   end 
   
@@ -30,6 +28,8 @@ class BankAccount
   end 
   
   def close_account
-      
+    @balance = 0
+    @status = "closed"
+  end 
 
 end
